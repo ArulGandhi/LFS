@@ -1,8 +1,7 @@
-#copy and paste as is to run or download and run as script
 tar -xvf binutils-2.40.tar.xz
 cd binutils-2.40
 mkdir -v build
-cd      build
+cd       build
 ../configure --prefix=$LFS/tools \
              --with-sysroot=$LFS \
              --target=$LFS_TGT   \
@@ -10,6 +9,6 @@ cd      build
              --enable-gprofng=no \
              --disable-werror
 make -j4 
-make -j4 install
+make -j4 install 
 cd ../..
 rm -Rf binutils-2.40

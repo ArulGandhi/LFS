@@ -1,0 +1,8 @@
+tar -xvf linux-6.1.11.tar.xz
+cd linux-6.1.11
+make -j4 mrproper
+make -j4 headers
+find usr/include -type f ! -name '*.h' -delete
+cp -rv usr/include $LFS/usr
+cd ..
+rm -Rf linux-6.1.11
