@@ -1,0 +1,9 @@
+tar -xvf m4-1.4.19.tar.xz
+cd m4-1.4.19
+./configure --prefix=/usr   \
+            --host=$LFS_TGT \
+            --build=$(build-aux/config.guess)
+make -j4
+make -j4 DESTDIR=$LFS install
+cd ..
+rm -Rf m4-1.4.19
