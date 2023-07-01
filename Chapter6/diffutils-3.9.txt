@@ -1,0 +1,7 @@
+tar -xvf diffutils-3.9.tar.xz
+cd diffutils-3.9
+./configure --prefix=/usr --host=$LFS_TGT
+make -j4
+make -j4 DESTDIR=$LFS install
+cd ..
+rm -Rf diffutils-3.9
