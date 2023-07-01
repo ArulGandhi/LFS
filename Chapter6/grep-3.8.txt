@@ -1,0 +1,8 @@
+tar -xvf grep-3.8.tar.xz
+cd grep-3.8
+./configure --prefix=/usr   \
+            --host=$LFS_TGT
+make -j4
+make -j4 DESTDIR=$LFS install
+cd ..
+rm -Rf grep-3.8

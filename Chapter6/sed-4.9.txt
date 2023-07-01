@@ -1,0 +1,8 @@
+tar -xvf sed-4.9.tar.xz
+cd sed-4.9
+./configure --prefix=/usr   \
+            --host=$LFS_TGT
+make -j4
+make -j4 DESTDIR=$LFS install
+cd ..
+rm -Rf sed-4.9

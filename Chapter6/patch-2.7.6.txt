@@ -1,0 +1,9 @@
+tar -xvf patch-2.7.6.tar.xz
+cd patch-2.7.6
+./configure --prefix=/usr   \
+            --host=$LFS_TGT \
+            --build=$(build-aux/config.guess)
+make -j4
+make -j4 DESTDIR=$LFS install
+cd ..
+rm -Rf patch-2.7.6

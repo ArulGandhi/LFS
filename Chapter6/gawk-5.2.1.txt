@@ -1,0 +1,10 @@
+tar -xvf gawk-5.2.1.tar.xz
+cd gawk-5.2.1
+sed -i 's/extras//' Makefile.in
+./configure --prefix=/usr   \
+            --host=$LFS_TGT \
+            --build=$(build-aux/config.guess)
+make -j4
+make -j4 DESTDIR=$LFS install
+cd ..
+rm -Rf gawk-5.2.1

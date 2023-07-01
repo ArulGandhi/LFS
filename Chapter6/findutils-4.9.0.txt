@@ -1,0 +1,10 @@
+tar -xvf findutils-4.9.0.tar.xz
+cd findutils-4.9.0
+./configure --prefix=/usr                   \
+            --localstatedir=/var/lib/locate \
+            --host=$LFS_TGT                 \
+            --build=$(build-aux/config.guess)
+make -j4
+make -j4 DESTDIR=$LFS install
+cd ..
+rm -Rf findutils-4.9.0
