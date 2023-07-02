@@ -1,0 +1,6 @@
+tar -xvf zlib-1.2.13.tar.xz
+cd zlib-1.2.13
+./configure --prefix=/usr
+make -j4
+make -j4 install
+rm -fv /usr/lib/libz.a

@@ -1,0 +1,7 @@
+tar -xvf file-5.44.tar.gz
+cd file-5.44
+./configure --prefix=/usr
+make -j4
+make -j4 install
+cd ..
+rm -Rf file-5.44

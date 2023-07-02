@@ -1,0 +1,14 @@
+tar -xvf gmp-6.2.1.tar.xz
+cd gmp-6.2.1
+./configure --prefix=/usr    \
+            --enable-cxx     \
+            --disable-static \
+            --docdir=/usr/share/doc/gmp-6.2.1
+make -j4
+make -j4 html
+make -j4 check 2>&1 | tee gmp-check-log
+awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log
+make -j4 install
+make -j4 install-html
+cd ..
+rm -Rf gmp-6.2.1

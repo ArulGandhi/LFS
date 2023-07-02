@@ -1,0 +1,7 @@
+tar -xvf zstd-1.5.4.tar.gz
+cd zstd-1.5.4
+make prefix=/usr
+make prefix=/usr -j4 install
+rm -v /usr/lib/libzstd.a
+cd ..
+rm -Rf zstd-1.5.4

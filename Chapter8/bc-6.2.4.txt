@@ -1,0 +1,7 @@
+tar -xvf bc-6.2.4.tar.xz
+cd bc-6.2.4
+CC=gcc ./configure --prefix=/usr -G -O3 -r
+make -j4
+make -j4 install
+cd ..
+rm -Rf bc-6.2.4

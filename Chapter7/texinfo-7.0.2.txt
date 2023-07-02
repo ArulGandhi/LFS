@@ -1,0 +1,7 @@
+tar -xvf texinfo-7.0.2.tar.xz
+cd texinfo-7.0.2
+./configure --prefix=/usr
+make -j4 
+make -j4 install
+cd ..
+rm -Rf texinfo-7.0.2
