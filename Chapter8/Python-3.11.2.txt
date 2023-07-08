@@ -1,0 +1,5 @@
+tar -xvf Python-3.11.2.tar.xz && cd Python-3.11.2 && ./configure --prefix=/usr        \
+            --enable-shared      \
+            --with-system-expat  \
+            --with-system-ffi    \
+            --enable-optimizations && make -j4 && make -j4 install && cd .. && rm -Rf Python-3.11.2

@@ -1,0 +1,3 @@
+tar -xvf expat-2.5.0.tar.xz && cd expat-2.5.0 && ./configure --prefix=/usr    \
+            --disable-static \
+            --docdir=/usr/share/doc/expat-2.5.0 && make -j4 && make -j4 install && install -v -m644 doc/*.{html,css} /usr/share/doc/expat-2.5.0 && cd .. && rm -Rf expat-2.5.0

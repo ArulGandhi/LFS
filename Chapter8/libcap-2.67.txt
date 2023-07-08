@@ -1,0 +1,1 @@
+tar -xvf libcap-2.67.tar.xz && cd libcap-2.67 && sed -i '/install -m.*STA/d' libcap/Makefile && make prefix=/usr lib=lib && make prefix=/usr lib=lib install && cd .. && rm -Rf libcap-2.67

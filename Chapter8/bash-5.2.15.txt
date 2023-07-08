@@ -1,0 +1,4 @@
+tar -xvf bash-5.2.15.tar.gz && cd bash-5.2.15 && ./configure --prefix=/usr             \ 
+            --without-bash-malloc     \
+            --with-installed-readline \
+            --docdir=/usr/share/doc/bash-5.2.15 && make -j4 && make -j4 install && exec /usr/bin/bash --login && cd .. && rm -Rf bash-5.2.15

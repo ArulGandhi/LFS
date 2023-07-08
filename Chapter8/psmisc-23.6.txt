@@ -1,0 +1,1 @@
+tar -xvf psmisc-23.6.tar.xz && cd psmisc-23.6 && ./configure --prefix=/usr && make -j4 && make -j4 install && cd .. && rm -Rf psmisc-23.6

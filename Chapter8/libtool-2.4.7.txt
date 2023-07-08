@@ -1,0 +1,1 @@
+tar -xvf libtool-2.4.7.tar.xz && cd libtool-2.4.7 && ./configure --prefix=/usr && make -j4 && make -j4 install && rm -fv /usr/lib/libltdl.a && cd .. && rm -Rf libtool-2.4.7
